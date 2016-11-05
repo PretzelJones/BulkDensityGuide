@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Bulk Density Guide</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Contact Developer</string>
+    <string name="title_activity_density">Bulk Density Guide</string>
+    <string name="title_activity_density_short">Density Guide</string>
+    <string name="title_activity_about_guide">About the Guide</string>
+    <string name="title_activity_about">About Hapman</string>
+    <string name="title_activity_contact">Contact Hapman</string>
+    <string name="title_activity_quote">Request for Quote</string>
+    <string name="title_activity_rep">Find a Rep</string>
+    <string name="title_activity_home">Hapman.com</string>
+    <string name="title_activity_devContact">Provide Feedback</string>
+    <string name="title_activity_share">Share the App</string>
+    <string name="guide_title">BULK DENSITY GUIDE</string>
+    <string name="guide_para1">You need to know bulk density to work with any powder or bulk solid. This guide, listing thousands of materials, is meant as a reference tool to assist you in designing your production system.</string>
+    <string name="guide_para2">Because the bulk density of a substance varies greatly depending on how the material has been handled, the information contained in this reference tool should be used for estimation purposes only.</string>
+    <string name="guide_para3">You can scroll through the entire list or start typing the name of a compound in the search field, all materials containing those characters will be displayed.</string>
+    <string name="title_activity_about_app">About the Guide</string>
+    <string name="title_activity_developer">The App Developer</string>
+    <string name="title_activity_website">http://bosson.design</string>
+    <string name="title_activity_demo">App Demo</string>
+</resources>
