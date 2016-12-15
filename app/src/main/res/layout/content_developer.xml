@@ -66,4 +66,13 @@
         android:textSize="24dp"
         android:layout_below="@+id/textView7"
         android:layout_centerHorizontal="true" />
+
+ <TextView
+     android:text="App Version 1.0.3 Dec 08, 2016"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_below="@+id/textView8"
+     android:layout_centerHorizontal="true"
+     android:layout_marginTop="30dp"
+     android:id="@+id/textView9" />
 </RelativeLayout>
