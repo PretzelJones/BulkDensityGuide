@@ -102,16 +102,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.bossondesign.hapman.MainActivity" />
         </activity>
-        <activity
-            android:name=".DemoActivity"
-            android:label="@string/title_activity_demo"
-            android:parentActivityName="com.bossondesign.hapman.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:configChanges="orientation">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.bossondesign.hapman.MainActivity" />
-        </activity>
     </application>
 
 </manifest>
