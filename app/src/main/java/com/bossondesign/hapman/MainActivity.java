@@ -42,9 +42,9 @@ public class MainActivity extends AppCompatActivity
         mWebView = (WebView) findViewById(R.id.activity_main_webview);
 
         //activity level hardware acceleration
-        /*getWindow().setFlags(
+        getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED,
-                WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);*/
+                WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);
 
         //initiate websettings
         WebSettings webSettings = mWebView.getSettings();
