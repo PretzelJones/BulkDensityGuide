@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.WindowManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Toast;
@@ -39,6 +40,11 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         mWebView = (WebView) findViewById(R.id.activity_main_webview);
+
+        //activity level hardware acceleration
+        /*getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED,
+                WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);*/
 
         //initiate websettings
         WebSettings webSettings = mWebView.getSettings();
