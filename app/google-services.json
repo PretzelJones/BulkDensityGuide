@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "735633382748",
+    "firebase_url": "https://bulkdensityguide.firebaseio.com",
+    "project_id": "bulkdensityguide",
+    "storage_bucket": "bulkdensityguide.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:735633382748:android:0a7568ab30039273",
+        "android_client_info": {
+          "package_name": "com.bossondesign.hapman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "735633382748-4teltlsmt9ii7ek2b8062ceqm14v32sb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBALZewhGv7ornDABD-MKcu4V5txymEjRQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
