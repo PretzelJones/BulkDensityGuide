@@ -109,9 +109,6 @@ public class ContactActivity extends AppCompatActivity
         } else if (id == R.id.nav_contact) {
             startActivity(new Intent(this, ContactActivity.class));
 
-        /*} else if (id == R.id.nav_quote) {
-            startActivity(new Intent(this, QuoteActivity.class));*/
-
         } else if (id == R.id.nav_rep) {
             startActivity(new Intent(this, RepActivity.class));
 

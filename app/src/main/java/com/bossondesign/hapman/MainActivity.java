@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity
         super.onConfigurationChanged(newConfig);
     }
 
-    //set behavior for backpress to exit app
+    //prevent single backpress app exit
     boolean doubleBackToExitPressedOnce = false;
 
     //handle other backpresses
@@ -151,17 +151,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_contact) {
             startActivity(new Intent(this, ContactActivity.class));
 
-        /*} else if (id == R.id.nav_quote) {
-            startActivity(new Intent(this, QuoteActivity.class));*/
-
         } else if (id == R.id.nav_rep) {
             startActivity(new Intent(this, RepActivity.class));
 
         } else if (id == R.id.nav_about) {
             startActivity(new Intent(this, AboutActivity.class));
-
-        /*} else if (id == R.id.nav_demo) {
-            startActivity(new Intent(this, DemoActivity.class));*/
 
         } else if (id == R.id.nav_share) {
             Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
