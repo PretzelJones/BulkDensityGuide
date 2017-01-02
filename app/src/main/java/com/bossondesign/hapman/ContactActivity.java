@@ -106,6 +106,9 @@ public class ContactActivity extends AppCompatActivity
         if (id == R.id.nav_about_app) {
             startActivity(new Intent(this, AboutAppActivity.class));
 
+        } else if (id == R.id.nav_home) {
+            startActivity(new Intent(this, HomeActivity.class));
+
         } else if (id == R.id.nav_contact) {
             startActivity(new Intent(this, ContactActivity.class));
 
