@@ -37,8 +37,10 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //initiate firebase
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
+        //initate apprater
         new AppRater(this).show();
 
         setContentView(R.layout.activity_main);
