@@ -68,7 +68,7 @@
         android:layout_centerHorizontal="true" />
 
  <TextView
-     android:text="App Version 1.0.4 Dec 19, 2016"
+     android:text="@string/app_version_info"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:layout_below="@+id/textView8"
