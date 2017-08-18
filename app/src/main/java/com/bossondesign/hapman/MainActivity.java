@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity
         //initiate websettings
         WebSettings webSettings = mWebView.getSettings();
 
-        //enable javascipting
+        //enable javascipt
         mWebView.getSettings().setJavaScriptEnabled(true);
 
         //load local html page
@@ -68,7 +68,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
 
     }
 
@@ -106,7 +105,7 @@ public class MainActivity extends AppCompatActivity
 
         } else {
             super.onBackPressed();
-            return;
+            //return;
         }
 
     }
