@@ -1,7 +1,10 @@
 package com.bossondesign.hapman;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
@@ -15,6 +18,7 @@ import android.view.MenuItem;
 import android.view.WindowManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Toast;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -30,6 +34,12 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        //test code for forcing links to open in app and not chrome - not working
+        //MyWebClient webClient = new MyWebClient();
+
+        WebView myWebView = (WebView) findViewById(R.id.activity_main_webview);
+        //myWebView.setWebViewClient(MyWebViewClient);
 
         //initiate firebase
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
@@ -58,13 +68,35 @@ public class MainActivity extends AppCompatActivity
         mWebView.loadUrl("file:///android_asset/bulk_material_table.html");
 
         //enable drawer
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        mWebView.setWebViewClient(new WebViewClient() {
+            ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
+
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                super.onPageStarted(view, url, favicon);
+                progressDialog.setTitle("Loading...");
+                progressDialog.setMessage("Please wait...");
+                progressDialog.setCancelable(false);
+                progressDialog.show();
+            }
+
+            @Override
+            public void onPageCommitVisible(WebView view, String url) {
+                super.onPageCommitVisible(view, url);
+                if (progressDialog != null){
+                    progressDialog.dismiss();
+                }
+            }
+
+        });
 
     }
 
@@ -110,7 +142,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
@@ -177,6 +208,5 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
 
 }
