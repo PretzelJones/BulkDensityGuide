@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+
         //test code for forcing links to open in app and not chrome - not working
         //MyWebClient webClient = new MyWebClient();
 
